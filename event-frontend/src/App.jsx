@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';  // Capital H in Home
+import Home from './pages/home';  // Capital H in Home
 import EventList from './components/EventList';
 import EventDetail from './pages/EventDetail'; // Correct import
 import Navbar from './components/Navbar';
