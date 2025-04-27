@@ -28,8 +28,8 @@ const Navbar = () => {
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+      <div className="collapse navbar-collapse justify-content-center text-center" id="navbarNav">
+        <ul className="navbar-nav mb-2 mb-lg-0">
           <li className="nav-item">
             <Link className="nav-link text-white" to="/events">Events</Link>
           </li>
@@ -40,24 +40,24 @@ const Navbar = () => {
           )}
         </ul>
 
-        <ul className="navbar-nav ms-auto align-items-center">
+        <ul className="navbar-nav mb-2 mb-lg-0">
           {token ? (
             <>
-              <li className="nav-item me-3">
+              <li className="nav-item">
                 <span className="nav-link text-white">
                   👤 {user?.username || 'User'}
                 </span>
               </li>
-              <li className="nav-item me-3">
+              <li className="nav-item">
                 <Link className="nav-link text-white" to="/dashboard">Dashboard</Link>
               </li>
               <li className="nav-item">
-                <button onClick={handleLogout} className="btn btn-sm btn-outline-light">Logout</button>
+                <button onClick={handleLogout} className="btn btn-sm btn-outline-light my-2">Logout</button>
               </li>
             </>
           ) : (
             <>
-              <li className="nav-item me-2">
+              <li className="nav-item">
                 <Link className="nav-link text-white" to="/login">Login</Link>
               </li>
               <li className="nav-item">
