@@ -10,7 +10,7 @@ const EventDetail = () => {
   useEffect(() => {
     const fetchEventDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/events/${id}`);
+        const response = await fetch(`https://final-assignment-obyq.vercel.app/api/events/${id}`);
         const data = await response.json();
 
         if (response.ok) {

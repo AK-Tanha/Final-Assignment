@@ -17,7 +17,7 @@ const UpdateEvent = () => {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/events/${id}`)
+    axios.get(`https://final-assignment-obyq.vercel.app/api/events/${id}`)
       .then((res) => setEventData(res.data))
       .catch((err) => {
         console.error('Error fetching event:', err);
@@ -34,7 +34,7 @@ const UpdateEvent = () => {
     setError('');
 
     try {
-      await axios.put(`http://localhost:5000/api/events/${id}`, eventData, {
+      await axios.put(`https://final-assignment-obyq.vercel.app/api/events/${id}`, eventData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

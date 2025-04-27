@@ -31,7 +31,7 @@ const CreateEvent = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/events', {
+      const response = await fetch('https://final-assignment-obyq.vercel.app/api/events', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

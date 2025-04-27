@@ -15,7 +15,7 @@ const Dashboard = () => {
 
   const fetchMyEvents = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/events/mine', {
+      const response = await axios.get('https://final-assignment-obyq.vercel.app/api/events/mine', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -38,7 +38,7 @@ const Dashboard = () => {
   const handleDelete = async (eventId) => {
     if (window.confirm('Are you sure you want to delete this event?')) {
       try {
-        const response = await axios.delete(`http://localhost:5000/api/events/${eventId}`, {
+        const response = await axios.delete(`https://final-assignment-obyq.vercel.app/api/events/${eventId}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`,
           },
