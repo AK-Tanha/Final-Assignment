@@ -28,8 +28,9 @@ const Navbar = () => {
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse justify-content-center text-center" id="navbarNav">
-        <ul className="navbar-nav mb-2 mb-lg-0">
+      <div className="collapse navbar-collapse" id="navbarNav">
+        {/* Left side */}
+        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
             <Link className="nav-link text-white" to="/events">Events</Link>
           </li>
@@ -40,7 +41,8 @@ const Navbar = () => {
           )}
         </ul>
 
-        <ul className="navbar-nav mb-2 mb-lg-0">
+        {/* Right side */}
+        <ul className="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
           {token ? (
             <>
               <li className="nav-item">
@@ -52,7 +54,7 @@ const Navbar = () => {
                 <Link className="nav-link text-white" to="/dashboard">Dashboard</Link>
               </li>
               <li className="nav-item">
-                <button onClick={handleLogout} className="btn btn-sm btn-outline-light my-2">Logout</button>
+                <button onClick={handleLogout} className="btn btn-sm btn-outline-light my-2 ms-lg-3">Logout</button>
               </li>
             </>
           ) : (
